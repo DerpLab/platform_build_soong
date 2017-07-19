@@ -552,3 +552,7 @@ func (c *config) IntegerOverflowDisabledForPath(path string) bool {
 	}
 	return prefixInList(path, *c.ProductVariables.IntegerOverflowExcludePaths)
 }
+
+func (c *deviceConfig) BoardUsesQTIHardware() bool {
+	return Bool(c.config.ProductVariables.BoardUsesQTIHardware)
+}
