@@ -174,6 +174,11 @@ type productVariables struct {
 
 	DeviceKernelHeaders []string `json:",omitempty"`
 
+	// Pathmap variables
+	QTIAudioPath *string `json:",omitempty"`
+	QTIDisplayPath *string `json:",omitempty"`
+	QTIMediaPath *string `json:",omitempty"`
+
 	// include Aosip variables
 	Aosip android_aosip.ProductVariables
 }
