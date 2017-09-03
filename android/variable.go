@@ -157,6 +157,11 @@ type productVariables struct {
 	Override_rs_driver *string `json:",omitempty"`
 	BoardUsesQTIHardware *bool `json:",omitempty"`
 
+	// Pathmap variables
+	QTIAudioPath *string `json:",omitempty"`
+	QTIDisplayPath *string `json:",omitempty"`
+	QTIMediaPath *string `json:",omitempty"`
+
 	// include aosip variables
 	*android.ProductVariables
 }
