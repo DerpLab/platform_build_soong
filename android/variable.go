@@ -88,8 +88,8 @@ type variableProperties struct {
 			Cppflags []string
 		}
 
-		// include aosip variables
-		*android.Product_variables
+		// include Aosip variables
+		Aosip android.Product_variables
 	} `android:"arch_variant"`
 }
 
@@ -162,8 +162,8 @@ type productVariables struct {
 	QTIDisplayPath *string `json:",omitempty"`
 	QTIMediaPath *string `json:",omitempty"`
 
-	// include aosip variables
-	*android.ProductVariables
+	// include Aosip variables
+	Aosip android.ProductVariables
 }
 
 func boolPtr(v bool) *bool {
