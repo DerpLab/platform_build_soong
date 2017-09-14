@@ -20,7 +20,7 @@ import (
 	"runtime"
 	"strings"
 
-	"aosip/soong/android"
+	"aosip/soong/android_aosip"
 
 	"github.com/google/blueprint/proptools"
 )
@@ -89,7 +89,7 @@ type variableProperties struct {
 		}
 
 		// include Aosip variables
-		Aosip android.Product_variables
+		Aosip android_aosip.Product_variables
 		Qualcomm android_aosip.Product_variables
 	} `android:"arch_variant"`
 }
@@ -164,7 +164,7 @@ type productVariables struct {
 	QTIMediaPath *string `json:",omitempty"`
 
 	// include Aosip variables
-	Aosip android.ProductVariables
+	Aosip android_aosip.ProductVariables
 	Qualcomm android_aosip.ProductVariables
 }
 
