@@ -552,19 +552,3 @@ func (c *config) IntegerOverflowDisabledForPath(path string) bool {
 	}
 	return prefixInList(path, *c.ProductVariables.IntegerOverflowExcludePaths)
 }
-
-func (c *deviceConfig) BoardUsesQTIHardware() bool {
-	return Bool(c.config.ProductVariables.Aosip.BoardUsesQTIHardware)
-}
-
-func (c *deviceConfig) QTIAudioPath() string {
-	return String(c.config.ProductVariables.Aosip.QTIAudioPath)
-}
-
-func (c *deviceConfig) QTIDisplayPath() string {
-	return String(c.config.ProductVariables.Aosip.QTIDisplayPath)
-}
-
-func (c *deviceConfig) QTIMediaPath() string {
-	return String(c.config.ProductVariables.Aosip.QTIMediaPath)
-}

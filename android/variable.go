@@ -99,7 +99,6 @@ type variableProperties struct {
 
 		// include Aosip variables
 		Aosip android_aosip.Product_variables
-		Qualcomm android_aosip.Product_variables
 	} `android:"arch_variant"`
 }
 
@@ -171,18 +170,11 @@ type productVariables struct {
 	BtConfigIncludeDir *string `json:",omitempty"`
 
 	Override_rs_driver *string `json:",omitempty"`
-	BoardUsesQTIHardware *bool `json:",omitempty"`
 
 	DeviceKernelHeaders []string `json:",omitempty"`
 
-	// Pathmap variables
-	QTIAudioPath *string `json:",omitempty"`
-	QTIDisplayPath *string `json:",omitempty"`
-	QTIMediaPath *string `json:",omitempty"`
-
 	// include Aosip variables
 	Aosip android_aosip.ProductVariables
-	Qualcomm android_aosip.ProductVariables
 }
 
 func boolPtr(v bool) *bool {
@@ -214,7 +206,6 @@ func (v *productVariables) SetDefaultConfig() {
 		DeviceSecondaryAbi:         &[]string{"armeabi-v7a"},
 		Malloc_not_svelte:          boolPtr(false),
 		Safestack:                  boolPtr(false),
-		BoardUsesQTIHardware:      boolPtr(false),
 	}
 
 	if runtime.GOOS == "linux" {
