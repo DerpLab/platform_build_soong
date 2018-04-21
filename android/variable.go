@@ -20,7 +20,7 @@ import (
 	"runtime"
 	"strings"
 
-	"aosip/soong/android_aosip"
+	"aosip/soong/android"
 
 	"github.com/google/blueprint/proptools"
 )
@@ -98,7 +98,7 @@ type variableProperties struct {
 		}
 
 		// include Aosip variables
-		Aosip android_aosip.Product_variables
+		Aosip android.Product_variables
 	} `android:"arch_variant"`
 }
 
@@ -174,7 +174,7 @@ type productVariables struct {
 	DeviceKernelHeaders []string `json:",omitempty"`
 
 	// include Aosip variables
-	Aosip android_aosip.ProductVariables
+	Aosip android.ProductVariables
 }
 
 func boolPtr(v bool) *bool {
