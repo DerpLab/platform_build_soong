@@ -175,7 +175,7 @@ func init() {
 		if override := config.(android.Config).Getenv("FLEX_EXEC"); override != "" {
 			return override, nil
 		}
-		return "prebuilts/misc/${HostPrebuiltTag}/flex/flex-2.5.39", nil
+		return "vendor/aosip/prebuilt/flex/flex-2.6.4", nil
 	})
 
 	pctx.VariableFunc("BisonExec", func(config interface{}) (string, error) {
