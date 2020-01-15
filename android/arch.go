@@ -138,6 +138,7 @@ var archVariants = map[ArchType][]string{
 		"cortex-a75",
 		"cortex-a76",
 		"kryo",
+		"kryo300",
 		"kryo385",
 		"exynos-m1",
 		"exynos-m2",
@@ -189,6 +190,7 @@ var archVariants = map[ArchType][]string{
 var archFeatures = map[ArchType][]string{
 	Arm: {
 		"neon",
+		"aarch32",
 	},
 	Mips: {
 		"dspr2",
@@ -231,9 +233,11 @@ var archFeatureMap = map[ArchType]map[string][]string{
 		},
 		"armv8-a": {
 			"neon",
+			"aarch32",
 		},
 		"armv8-2a": {
 			"neon",
+			"aarch32",
 		},
 	},
 	Mips: {
